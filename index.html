@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/favicon.ico.png">
+    <title>Beto Barbershop - La mejor Barberia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              orange: "#F97316",
+              "dark-gray": "#1F2937",
+              "light-cream": "#FEF3E2",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-dark-gray px-4 py-4 fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <img
+            class="w-[150px] h-20"
+            src="./assets/logo.png" 
+            alt="">
+        </div>
+
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-white hover:text-orange transition"
+            >Home</a
+          >
+          <a href="#about" class="text-white hover:text-orange transition"
+            >Sobre Nosotros</a
+          >
+          <a href="#services" class="text-white hover:text-orange transition"
+            >Servicios</a
+          >
+        </div>
+
+        <button
+          class="bg-orange text-white px-6 py-2 rounded-full hover:bg-orange-600 transition"
+        >
+          Reservar cita
+        </button>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden text-white">
+          <span class="block w-6 h-0.5 bg-white mb-1"></span>
+          <span class="block w-6 h-0.5 bg-white mb-1"></span>
+          <span class="block w-6 h-0.5 bg-white"></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+        <a
+          href="#home"
+          class="block text-white py-2 hover:text-orange transition"
+          >Home</a
+        >
+         <a
+          href="#about"
+          class="block text-white py-2 hover:text-orange transition"
+          >Sobre Nosotros</a
+        >
+        <a
+          href="#services"
+          class="block text-white py-2 hover:text-orange transition"
+          >Servicios</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative h-screen bg-dark-gray flex items-center justify-center overflow-hidden mt-4"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="absolute inset-0">
+        <img
+          src="./assets/banner.png"
+          alt="Barber at work"
+          class="w-full h-full object-cover my-4"
+        />
+      </div>
+
+      <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 my-8">
+          La mejor<br />Barbería de Vigo
+        </h1>
+        <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+          Bienvenido a Beto BarberShop, donde la tradición clásica se encuentra con el
+          estilo contemporáneo. Nuestro equipo de barberos expertos está
+          dedicado a ofrecer servicios de aseo de primera calidad adaptados a
+          tus necesidades únicas.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
+        >
+          <button
+            class="bg-white text-dark-gray px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+          >
+            Contáctanos ahora!
+          </button>
+          <div class="flex items-center space-x-2">
+            <div class="flex space-x-1">
+              <span class="text-orange">⭐⭐⭐⭐⭐</span>
+            </div>
+            <span class="text-white text-sm"
+              >4.9 de 5 basado en 800 reseñas</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-light-cream">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="relative">
+            <div
+              class="bg-orange w-64 h-64 absolute -top-8 -left-8 rounded"
+            ></div>
+            <img
+              src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Barber cutting hair"
+              class="relative z-10 w-full max-w-md h-96 object-cover rounded shadow-lg"
+            />
+          </div>
+
+          <div>
+            <span
+              class="bg-light-cream border border-orange px-4 py-2 rounded text-orange font-semibold"
+              >SOBRE NOSOTROS</span
+            >
+            <h2 class="text-4xl md:text-5xl font-bold text-dark-gray mt-6 mb-6">
+              Dominando El Arte Del Cuidado Personal
+            </h2>
+            <p class="text-gray-600 text-lg mb-8">
+              Nos mantenemos a la vanguardia de las últimas tendencias mientras
+              honramos técnicas atemporales, asegurándonos de que salgas de
+              nuestro salón no solo luciendo genial, sino sintiéndote seguro y
+              empoderado.
+            </p>
+            <button
+              class="bg-orange text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition"
+            >
+              Más sobre nosotros
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark-gray">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <span class="bg-gray-700 text-white px-4 py-2 rounded font-semibold"
+            >SERVICIOS</span
+          >
+          <h2 class="text-4xl md:text-5xl font-bold text-white mt-6 mb-6">
+            Ofrecemos una amplia gama de servicios
+          </h2>
+          <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+            Nuestros barberos expertos se especializan en cortes clásicos,
+            modernos y personalizados para todo tipo de cabello y texturas. Ya
+            sea un estilo atemporal o la última tendencia, nos aseguraremos de
+            que tú
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <div class="flex items-start space-x-4">
+              <span
+                class="bg-gray-700 text-white rounded-full w-12 h-12 flex items-center justify-center font-semibold"
+                >01</span
+              >
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-2">
+                  Cuidado de la barba
+                </h3>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <span
+                class="bg-orange text-white rounded-full w-12 h-12 flex items-center justify-center font-semibold"
+                >02</span
+              >
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-2">
+                  Prótesis Capilares
+                </h3>
+                <p class="text-gray-300 flex items-center text-center"></p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <span
+                class="bg-gray-700 text-white rounded-full w-12 h-12 flex items-center justify-center font-semibold"
+                >03</span
+              >
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-2">
+                  Afeitados faciales
+                </h3>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <span
+                class="bg-gray-700 text-white rounded-full w-12 h-12 flex items-center justify-center font-semibold"
+                >04</span
+              >
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-2">
+                  Estilización de Barba
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="bg-orange w-64 h-64 absolute -top-8 -right-8 rounded"
+            ></div>
+            <img
+              src="./assets/beto.jpg"
+              alt="Barber working"
+              class="relative z-10 w-full h-96 object-cover rounded shadow-lg"
+            />
+            <div
+              class="bg-orange w-32 h-32 absolute -bottom-8 -left-8 rounded"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <span
+            class="bg-light-cream border border-orange px-4 py-2 rounded text-orange font-semibold"
+            >ELÍJANOS</span
+          >
+          <h2 class="text-4xl md:text-5xl font-bold text-dark-gray mt-6 mb-6">
+            Por qué elegirnos
+          </h2>
+          <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+            Nuestros expertos barberos se especializan en cortes clásicos,
+            modernos y personalizados para todo tipo y textura de cabello. Ya
+            sea un estilo atemporal o la última tendencia, nos aseguraremos de
+            que tú
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="relative">
+            <div
+              class="bg-orange w-64 h-64 absolute -top-8 -left-8 rounded"
+            ></div>
+            <img
+              src="./assets/banner.png"
+              alt="Comfortable barber shop"
+              class="relative z-10 w-full h-96 object-cover rounded shadow-lg"
+            />
+            <div
+              class="bg-orange w-32 h-32 absolute -bottom-8 -right-8 rounded"
+            ></div>
+          </div>
+
+          <div>
+            <h3 class="text-3xl font-bold text-dark-gray mb-6">
+              Entorno Cómodo y Relajante
+            </h3>
+            <p class="text-gray-600 text-lg mb-8">
+              Creemos que el cuidado personal es más que solo un servicio: es
+              una experiencia. Aquí está la razón por la que nuestros clientes
+              confían en nosotros para mantenerlos luciendo lo mejor posible en
+              la barbería.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <span class="text-orange text-xl">✓</span>
+                <span class="text-gray-700"
+                  >Gran conversación y sintiéndome renovado.</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="text-orange text-xl">✓</span>
+                <span class="text-gray-700"
+                  >Disfruta de una atmósfera cómoda.</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="text-orange text-xl">✓</span>
+                <span class="text-gray-700"
+                  >Su salud y seguridad son nuestra máxima prioridad.</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="text-orange text-xl">✓</span>
+                <span class="text-gray-700"
+                  >Demostramos el lujo o la calidad de nuestros servicios</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-dark-gray">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <span class="bg-gray-700 text-white px-4 py-2 rounded font-semibold"
+            >TESTIMONIAL</span
+          >
+          <h2 class="text-4xl md:text-5xl font-bold text-white mt-6 mb-6">
+            Lo que nuestros clientes están diciendo sobre nosotros
+          </h2>
+          <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+            Nuestros barberos expertos se especializan en cortes clásicos,
+            modernos y personalizados para todo tipo de cabello y texturas. Ya
+            sea un estilo atemporal o la última tendencia, nos aseguraremos de
+            que tú
+          </p>
+        </div>
+
+        <div
+          id="testimonial-container"
+          class="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          <div class="bg-light-cream p-8 rounded-lg">
+            <p class="text-gray-700 text-lg mb-6 italic">
+              "Me encanta venir aquí porque cada vez salgo renovado. Los barberos son amables, profesionales y dominan todas las tendencias. ¡Un 10 de 10!"
+            </p>
+            <div class="flex items-center space-x-4">
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                alt="Robert Lee"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <h4 class="font-bold text-dark-gray">Mateus Castro</h4>
+                <p class="text-gray-600">Cliente</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-light-cream p-8 rounded-lg">
+            <p class="text-gray-700 text-lg mb-6 italic">
+              Atención rápida, cortes precisos y un equipo que sabe escuchar lo que quieres. No es solo un corte, es un momento de relajación y estilo.
+            </p>
+            <div class="flex items-center space-x-4">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                alt="Daniel Corp"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div>
+                <h4 class="font-bold text-dark-gray">Daniel Santos</h4>
+                <p class="text-gray-600">Cliente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center space-x-4 mt-8">
+          <button
+            id="prev-testimonial"
+            class="bg-gray-700 text-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-600 transition"
+          >
+            ←
+          </button>
+          <button
+            id="next-testimonial"
+            class="bg-white text-dark-gray rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <span
+            class="bg-light-cream border border-orange px-4 py-2 rounded text-orange font-semibold"
+            >FAQ QUESTIONS</span
+          >
+          <h2 class="text-4xl md:text-5xl font-bold text-dark-gray mt-6 mb-6">
+            ¿Pregunta Frecuente?
+          </h2>
+          <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+            Nuestros barberos expertos se especializan en cortes clásicos,
+            modernos y personalizados para todo tipo de cabello y texturas. Ya
+            sea un estilo atemporal o la última tendencia, nos aseguraremos de
+            que tú
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="faq-item border border-gray-200 rounded-lg p-4">
+            <button
+              class="faq-question w-full text-left flex justify-between items-center font-semibold text-dark-gray"
+            >
+              ¿Qué servicios ofrece Beto?
+              <span class="faq-icon text-orange text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden mt-4 text-gray-600">
+              Ofrecemos cortes de cabello, arreglo de barba, afeitados faciales,
+              prótesis capilares estilizado de barba y varios otros servicios de
+              cuidado personal.
+            </div>
+          </div>
+
+          <div class="faq-item border border-gray-200 rounded-lg p-4">
+            <button
+              class="faq-question w-full text-left flex justify-between items-center font-semibold text-dark-gray"
+            >
+              ¿Cuánto tiempo tarda un corte de cabello típico?
+              <span class="faq-icon text-orange text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden mt-4 text-gray-600">
+              Un corte de cabello típico toma de 30 a 45 minutos, dependiendo de
+              la complejidad del estilo.
+            </div>
+          </div>
+
+          <div class="faq-item border border-orange border-2 rounded-lg p-4">
+            <button
+              class="faq-question w-full text-left flex justify-between items-center font-semibold text-dark-gray"
+            >
+              ¿Cuál es la política de cancelación de Beto?
+              <span class="faq-icon text-orange text-xl">−</span>
+            </button>
+            <div class="faq-answer mt-4 text-gray-600">
+              Entendemos que los planes pueden cambiar. Si necesita cancelar o
+              reprogramar, hágalo al menos 24 horas antes de su cita para evitar
+              cargos por cancelación.
+            </div>
+          </div>
+
+          <div class="faq-item border border-orange border-2 rounded-lg p-4">
+            <button
+              class="faq-question w-full text-left flex justify-between items-center font-semibold text-dark-gray"
+            >
+              ¿Puedo solicitar un barbero específico?
+              <span class="faq-icon text-orange text-xl">−</span>
+            </button>
+            <div class="faq-answer mt-4 text-gray-600">
+              Sí, al reservar su cita, puede solicitar su barbero preferido
+              según la disponibilidad. Todos nuestros barberos son altamente
+              capacitados, asegurando que reciba un servicio de primera calidad.
+            </div>
+          </div>
+
+          <div class="faq-item border border-gray-200 rounded-lg p-4">
+            <button
+              class="faq-question w-full text-left flex justify-between items-center font-semibold text-dark-gray"
+            >
+              ¿Ofrecen servicios para niños?
+              <span class="faq-icon text-orange text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden mt-4 text-gray-600">
+              Sí, damos la bienvenida a los niños y ofrecemos servicios de corte
+              de cabello aptos para niños en un ambiente cómodo.
+            </div>
+          </div>
+
+          <div class="faq-item border border-gray-200 rounded-lg p-4">
+            <button
+              class="faq-question w-full text-left flex justify-between items-center font-semibold text-dark-gray"
+            >
+              ¿Qué métodos de pago aceptan?
+              <span class="faq-icon text-orange text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden mt-4 text-gray-600">
+              Aceptamos efectivo, tarjetas de crédito, tarjetas de débito y la
+              mayoría de los métodos de pago digitales.
+            </div>
+          </div>
+
+          <div class="faq-item border border-gray-200 rounded-lg p-4">
+            <button
+              class="faq-question w-full text-left flex justify-between items-center font-semibold text-dark-gray"
+            >
+              ¿Puedo conseguir un combo de corte de pelo y recorte de barba?
+              <span class="faq-icon text-orange text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden mt-4 text-gray-600">
+              ¡Absolutamente! Ofrecemos paquetes combinados que incluyen
+              servicios de corte de cabello y arreglo de barba.
+            </div>
+          </div>
+
+          <div class="faq-item border border-gray-200 rounded-lg p-4">
+            <button
+              class="faq-question w-full text-left flex justify-between items-center font-semibold text-dark-gray"
+            >
+              ¿Cómo puedo contactar a Beto Peluquero para más preguntas?
+              <span class="faq-icon text-orange text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden mt-4 text-gray-600">
+              Puedes contactarnos por teléfono, correo electrónico o visitando
+              nuestra tienda directamente. Síguenos en las redes sociales para
+              actualizaciones.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="py-20 bg-orange">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-dark-gray mb-8">
+            SÍGUENOS EN INSTAGRAM
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+          <img
+            src="./assets/beto.jpg"
+            alt="Instagram 1"
+            class="w-full aspect-square object-cover hover:opacity-80 transition"
+          />
+          <img
+            src="./assets/instagram.jpg"
+            alt="Instagram 2"
+            class="w-full aspect-square object-cover hover:opacity-80 transition"
+          />
+          <img
+            src="/assets/instagram1.jpg"
+            alt="Instagram 3"
+            class="w-full aspect-square object-cover hover:opacity-80 transition"
+          />
+          <img
+            src="/assets/instagram2.jpg"
+            alt="Instagram 4"
+            class="w-full aspect-square object-cover hover:opacity-80 transition"
+          />
+
+          <img
+            src="/assets/instagram4.jpg"
+            alt="Instagram 6"
+            class="w-full aspect-square object-cover hover:opacity-80 transition"
+          />
+
+          <img
+            src="/assets/instagram3.jpeg"
+            alt="Instagram 6"
+            class="w-full aspect-square object-cover hover:opacity-80 transition"
+          />
+        </div>
+
+        <div class="text-center mt-8">
+          <div
+            class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto"
+          >
+            <span class="text-2xl">📷</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-gray py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-6">
+              <img
+                class="w-25 h-20"
+                src="./assets/logo.png" 
+                alt="">
+            </div>
+
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="bg-orange rounded-full w-10 h-10 flex items-center justify-center text-white hover:bg-orange-600 transition"
+                >f</a
+              >
+              <a
+                href="#"
+                class="bg-orange rounded-full w-10 h-10 flex items-center justify-center text-white hover:bg-orange-600 transition"
+                >X</a
+              >
+              <a
+                href="#"
+                class="bg-orange rounded-full w-10 h-10 flex items-center justify-center text-white hover:bg-orange-600 transition"
+                >in</a
+              >
+              <a
+                href="#"
+                class="bg-orange rounded-full w-10 h-10 flex items-center justify-center text-white hover:bg-orange-600 transition"
+                >📷</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-6">Main Pages</h4>
+            <div class="space-y-3">
+              <a
+                href="#"
+                class="block text-gray-300 hover:text-orange transition"
+                >Home</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-6">Instagram</h4>
+            <div class="space-y-3">
+              <a
+                href="https://www.instagram.com/beto_profesional"
+                class="block text-gray-300 hover:text-orange transition"
+                >Síguenos en Instagram</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-white font-semibold mb-6">Páginas</h4>
+            <div class="space-y-3">
+              <a
+                href="#home"
+                class="block text-gray-300 hover:text-orange transition"
+                >Home</a
+              >
+              <a
+                href="#about"
+                class="block text-gray-300 hover:text-orange transition"
+                >Sobre Nosotros</a
+              >
+              <a
+                href="#servicies"
+                class="block text-gray-300 hover:text-orange transition"
+                >Servicios</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p class="text-gray-300">
+            &copy; 2025 Beto Peluquero. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
